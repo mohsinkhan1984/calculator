@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style>
+            h1{
+                color: rgb(177, 205, 205);
+            }
+            .b{
+                background-color: aqua;
+                color: black;
+                padding: 15px 30px;
+                text-align: center;
+            }
+            .t{
+                font-size: 20px;
+                background-color: rgb(25, 171, 171);
+            }
+            .h{
+                background-color: greenyellow;
+                color: white;
+            }
+            
+        </style>
+        <!-- function to clear the value of text box -->
+        <script>
+         function ac(){
+            document.getElementById("res").value="";
+         }
+         function show(input){
+            ///+ sign after value is used to concatenate the the number 
+            document.getElementById("res").value+=input;
+         }
+         function cal(){
+          var output= eval( document.getElementById("res").value);
+          document.getElementById("res").value=output;
+         }
+        
+      
+        
+        </script>
+    </head>
+    <body>
+        <table border="1" cellspacing="5px" cellpading="5px">
+            <!-- USING CAPTION HELPS TO ALLIGN THE CONTENT IN THE CENTER -->
+            <caption><h1 class="h">mohsin CALCULATOR</h1></caption>
+            <!-- first row -->
+            <tr>
+                <td colspan="3" align="center" bgcolor="black"><input type="text" class="t" id="res"></td>
+                <td><button class="b" onclick="ac()">AC</button></td>
+            </tr>
+            <!-- second row  -->
+            <tr>
+                <td align="CENTER"><button class="b" onclick="show ('1')">1</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('2')">2</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('3')">3</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('+')">+</button></td>
+            </tr>
+            <!-- third row  -->
+
+            <tr>
+                <td align="CENTER"><button class="b" onclick="show ('4')">4</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('5')">5</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('6')">6</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('-')">-</button></td>
+            </tr>
+
+            <!-- fourth row  -->
+            <tr>
+                <td align="CENTER"><button class="b" onclick="show ('7')">7</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('8')">8</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('9')">9</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('*')">*</button></td>
+            </tr>
+            <!-- fifth row  -->
+            <tr>
+                <td align="CENTER"><button class="b" onclick="show ('0')">0</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('%')">%</button></td>
+                <td align="CENTER"><button class="b" onclick="show ('/')">/</button></td>
+                <td align="CENTER"><button class="b" onclick="cal()">=</button></td>
+            </tr> 
+
+        </table>
+    </body>
+</html>
